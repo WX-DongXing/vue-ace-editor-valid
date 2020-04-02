@@ -1,14 +1,12 @@
 {
   "name": "vue-ace-editor-valid",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A ace editor for Vue",
   "private": false,
   "main": "./dist/vue-ace-editor-valid.umd.min.js",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/WX-DongXing/vue-ace-editor-valid.git"
-  },
+  "repository": "https://github.com/WX-DongXing/vue-ace-editor-valid.git",
+  "author": "xingdong <dong.xing@outlook.com>",
   "homepage": "https://wx-dongxing.github.io/vue-ace-editor-valid",
   "scripts": {
     "serve": "vue-cli-service serve",

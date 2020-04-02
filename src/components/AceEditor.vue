@@ -57,7 +57,7 @@ export default {
 
     this.editor.setValue(this.code)
     this.editor.setOptions(this.options)
-    this.editor.setTheme(`ace/theme/${this.theme}`)
+    this.theme && this.editor.setTheme(`ace/theme/${this.theme}`)
   },
   methods: {
     /**

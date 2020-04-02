@@ -3096,7 +3096,7 @@ var external_ace_default = /*#__PURE__*/__webpack_require__.n(external_ace_);
 
     this.editor.setValue(this.code);
     this.editor.setOptions(this.options);
-    this.editor.setTheme("ace/theme/".concat(this.theme));
+    this.theme && this.editor.setTheme("ace/theme/".concat(this.theme));
   },
   methods: {
     /**
