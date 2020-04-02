@@ -9,7 +9,7 @@
 ##### 1. add ace [CDN source](https://cdnjs.com/libraries/ace) to index.html
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.7/ace.js" integrity="sha256-C7DTYRJLG+B/VEzHGeoPMw699nsTQYPAXHKXZb+q04E=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.7/mode-json.js" integrity="sha256-WH3EjHkUnhbOt45gfu5MvEYSqvYUXE25FwAtxukgi9U=" crossorigin="anonymous"></
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.7/mode-json.js" integrity="sha256-WH3EjHkUnhbOt45gfu5MvEYSqvYUXE25FwAtxukgi9U=" crossorigin="anonymous"></script>
 ```
 ##### 2. config CDN
 ```js
