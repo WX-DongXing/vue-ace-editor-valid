@@ -6,12 +6,12 @@
 * only use CDN source
 
 ## How to use
-##### 1. add ace [CDN source](https://cdnjs.com/libraries/ace) to index.html
+#### 1. add ace [CDN Source](https://cdnjs.com/libraries/ace) to index.html
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.7/ace.js" integrity="sha256-C7DTYRJLG+B/VEzHGeoPMw699nsTQYPAXHKXZb+q04E=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.7/mode-json.js" integrity="sha256-WH3EjHkUnhbOt45gfu5MvEYSqvYUXE25FwAtxukgi9U=" crossorigin="anonymous"></script>
 ```
-##### 2. config CDN
+#### 2. config CDN
 ```js
 // vue.config.js
 
@@ -23,12 +23,12 @@ module.exports = {
   }
 }
 ```
-##### 3. install vue-ace-editor-valid
+#### 3. install vue-ace-editor-valid
 ```
 npm install --save vue-ace-editor-valid
 ```
 
-##### 4. use vue-ace-editor-valid
+#### 4. use vue-ace-editor-valid
 ```vue
 <template>
     <ace-editor class="editor" v-model="code" />

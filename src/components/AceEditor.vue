@@ -61,9 +61,9 @@ export default {
   },
   methods: {
     /**
-       * listening lint events from worker
-       * @param data
-       */
+     * listening lint events from worker
+     * @param data
+     */
     workerMessage ({ data }) {
       const [validationInfo] = data
       if (validationInfo && validationInfo.type === 'error') {
@@ -73,11 +73,11 @@ export default {
       }
     },
     /**
-       * set editor size
-       * @param dom
-       * @param width
-       * @param height
-       */
+     * set editor size
+     * @param dom
+     * @param width
+     * @param height
+     */
     setSize (dom, { width = this.width, height = this.height }) {
       dom.style.width = width && typeof width === 'number' ? `${width}px` : '100%'
       dom.style.height = height && typeof height === 'number' ? `${height}px` : '100%'
@@ -86,45 +86,52 @@ export default {
   },
   watch: {
     /**
-       * watching and set options
-       * @param newOptions ace editor options
-       */
+     * watching and set options
+     * @param newOptions ace editor options
+     */
     options (newOptions) {
       if (newOptions && typeof newOptions === 'object') {
         this.editor.setOptions(newOptions)
       }
     },
     /**
-       * watching and set theme
-       * @param newTheme
-       */
+     * watching and set theme
+     * @param newTheme
+     */
     theme (newTheme) {
       if (newTheme && typeof newTheme === 'string') {
         this.editor.setTheme(`ace/theme/${this.theme}`)
       }
     },
     /**
-       * watching and set language
-       * @param newLanguage
-       */
+     * watching and set language
+     * @param newLanguage
+     */
     language (newLanguage) {
       if (newLanguage && typeof newLanguage === 'string') {
         this.editor.session.setMode(`ace/mode/${newLanguage}`)
       }
     },
     /**
-       * watching and set width
-       * @param newWidth
-       */
+     * watching and set width
+     * @param newWidth
+     */
     width (newWidth) {
       this.setSize(this.el, { width: newWidth })
     },
     /**
-       * watching and set height
-       * @param newHeight
-       */
+     * watching and set height
+     * @param newHeight
+     */
     height (newHeight) {
       this.setSize(this.el, { height: newHeight })
+    },
+    /**
+     * watching and set code
+     * @param newCode
+     */
+    code (newCode) {
+      this.editor.setValue(newCode)
     }
   },
   beforeDestroy () {

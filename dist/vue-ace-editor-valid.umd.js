@@ -3109,9 +3109,9 @@ var external_ace_default = /*#__PURE__*/__webpack_require__.n(external_ace_);
   },
   methods: {
     /**
-       * listening lint events from worker
-       * @param data
-       */
+     * listening lint events from worker
+     * @param data
+     */
     workerMessage: function workerMessage(_ref) {
       var data = _ref.data;
 
@@ -3126,11 +3126,11 @@ var external_ace_default = /*#__PURE__*/__webpack_require__.n(external_ace_);
     },
 
     /**
-       * set editor size
-       * @param dom
-       * @param width
-       * @param height
-       */
+     * set editor size
+     * @param dom
+     * @param width
+     * @param height
+     */
     setSize: function setSize(dom, _ref2) {
       var _this = this;
 
@@ -3147,9 +3147,9 @@ var external_ace_default = /*#__PURE__*/__webpack_require__.n(external_ace_);
   },
   watch: {
     /**
-       * watching and set options
-       * @param newOptions ace editor options
-       */
+     * watching and set options
+     * @param newOptions ace editor options
+     */
     options: function options(newOptions) {
       if (newOptions && _typeof(newOptions) === 'object') {
         this.editor.setOptions(newOptions);
@@ -3157,9 +3157,9 @@ var external_ace_default = /*#__PURE__*/__webpack_require__.n(external_ace_);
     },
 
     /**
-       * watching and set theme
-       * @param newTheme
-       */
+     * watching and set theme
+     * @param newTheme
+     */
     theme: function theme(newTheme) {
       if (newTheme && typeof newTheme === 'string') {
         this.editor.setTheme("ace/theme/".concat(this.theme));
@@ -3167,9 +3167,9 @@ var external_ace_default = /*#__PURE__*/__webpack_require__.n(external_ace_);
     },
 
     /**
-       * watching and set language
-       * @param newLanguage
-       */
+     * watching and set language
+     * @param newLanguage
+     */
     language: function language(newLanguage) {
       if (newLanguage && typeof newLanguage === 'string') {
         this.editor.session.setMode("ace/mode/".concat(newLanguage));
@@ -3177,9 +3177,9 @@ var external_ace_default = /*#__PURE__*/__webpack_require__.n(external_ace_);
     },
 
     /**
-       * watching and set width
-       * @param newWidth
-       */
+     * watching and set width
+     * @param newWidth
+     */
     width: function width(newWidth) {
       this.setSize(this.el, {
         width: newWidth
@@ -3187,13 +3187,21 @@ var external_ace_default = /*#__PURE__*/__webpack_require__.n(external_ace_);
     },
 
     /**
-       * watching and set height
-       * @param newHeight
-       */
+     * watching and set height
+     * @param newHeight
+     */
     height: function height(newHeight) {
       this.setSize(this.el, {
         height: newHeight
       });
+    },
+
+    /**
+     * watching and set code
+     * @param newCode
+     */
+    code: function code(newCode) {
+      this.editor.setValue(newCode);
     }
   },
   beforeDestroy: function beforeDestroy() {

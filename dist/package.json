@@ -1,6 +1,6 @@
 {
   "name": "vue-ace-editor-valid",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A ace editor for Vue",
   "private": false,
   "main": "./vue-ace-editor-valid.umd.min.js",
