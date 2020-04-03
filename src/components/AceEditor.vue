@@ -36,7 +36,11 @@ export default {
     return createElement('div')
   },
   data: () => ({
-    editor: null
+    editor: null,
+    cursorPosition: {
+      row: 0,
+      column: 0
+    }
   }),
   mounted () {
     // set init editor size
@@ -69,6 +73,8 @@ export default {
      * @param data
      */
     workerMessage ({ data }) {
+      // record current cursor position
+      this.cursorPosition = this.editor.selection.getCursor()
       const [validationInfo] = data
       if (validationInfo && validationInfo.type === 'error') {
         this.$emit('validationFailed', validationInfo)
@@ -137,6 +143,9 @@ export default {
     code (newCode) {
       this.editor.setValue(newCode)
       this.editor.clearSelection()
+      const { row, column } = this.cursorPosition
+      // move cursor to current position
+      this.editor.selection.moveCursorTo(row, column)
     }
   },
   beforeDestroy () {

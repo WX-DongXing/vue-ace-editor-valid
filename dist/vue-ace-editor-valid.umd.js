@@ -3083,7 +3083,11 @@ var external_ace_default = /*#__PURE__*/__webpack_require__.n(external_ace_);
   },
   data: function data() {
     return {
-      editor: null
+      editor: null,
+      cursorPosition: {
+        row: 0,
+        column: 0
+      }
     };
   },
   mounted: function mounted() {
@@ -3117,6 +3121,8 @@ var external_ace_default = /*#__PURE__*/__webpack_require__.n(external_ace_);
      */
     workerMessage: function workerMessage(_ref) {
       var data = _ref.data;
+      // record current cursor position
+      this.cursorPosition = this.editor.selection.getCursor();
 
       var _data = _slicedToArray(data, 1),
           validationInfo = _data[0];
@@ -3206,6 +3212,11 @@ var external_ace_default = /*#__PURE__*/__webpack_require__.n(external_ace_);
     code: function code(newCode) {
       this.editor.setValue(newCode);
       this.editor.clearSelection();
+      var _this$cursorPosition = this.cursorPosition,
+          row = _this$cursorPosition.row,
+          column = _this$cursorPosition.column; // move cursor to current position
+
+      this.editor.selection.moveCursorTo(row, column);
     }
   },
   beforeDestroy: function beforeDestroy() {
