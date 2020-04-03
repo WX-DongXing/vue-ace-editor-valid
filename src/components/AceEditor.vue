@@ -55,7 +55,11 @@ export default {
       this.editor.session.$worker.addEventListener('annotate', this.workerMessage, false)
     }
 
+    // set value and clear selection
     this.editor.setValue(this.code)
+    this.editor.clearSelection()
+
+    // set ace editor options and theme
     this.editor.setOptions(this.options)
     this.theme && this.editor.setTheme(`ace/theme/${this.theme}`)
   },
@@ -132,6 +136,7 @@ export default {
      */
     code (newCode) {
       this.editor.setValue(newCode)
+      this.editor.clearSelection()
     }
   },
   beforeDestroy () {

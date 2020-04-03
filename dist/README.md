@@ -1,4 +1,6 @@
 # vue-ace-editor-valid
+![npm](https://img.shields.io/npm/v/vue-ace-editor-valid?color=brightgreen)
+
 [ace editor](https://github.com/ajaxorg/ace) for vue
 
 ## Feature
@@ -25,7 +27,9 @@ module.exports = {
 ```
 #### 3. install vue-ace-editor-valid
 ```
-npm install --save vue-ace-editor-valid
+$ npm install --save vue-ace-editor-valid
+# or
+$ yarn add vue-ace-editor-valid
 ```
 
 #### 4. use vue-ace-editor-valid

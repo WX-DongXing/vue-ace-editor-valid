@@ -3092,9 +3092,12 @@ var external_ace_default = /*#__PURE__*/__webpack_require__.n(external_ace_);
 
     if (this.editor.session.$worker) {
       this.editor.session.$worker.addEventListener('annotate', this.workerMessage, false);
-    }
+    } // set value and clear selection
+
 
     this.editor.setValue(this.code);
+    this.editor.clearSelection(); // set ace editor options and theme
+
     this.editor.setOptions(this.options);
     this.theme && this.editor.setTheme("ace/theme/".concat(this.theme));
   },
@@ -3193,6 +3196,7 @@ var external_ace_default = /*#__PURE__*/__webpack_require__.n(external_ace_);
      */
     code: function code(newCode) {
       this.editor.setValue(newCode);
+      this.editor.clearSelection();
     }
   },
   beforeDestroy: function beforeDestroy() {
